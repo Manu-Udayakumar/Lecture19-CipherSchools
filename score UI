@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class scoreManager : MonoBehaviour
+{
+    
+    public static scoreManager instance;
+    private void awake(){
+        if (instance==null){
+            instance=this;
+
+        }
+    }
+    private int score =0;
+    public void AddScore(int points){
+    score+=points;
+   }
+}
